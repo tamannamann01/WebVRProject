@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+<body>
+
+  <a-scene >
+
+    <!-- sky -->
+    <a-sky src="#sky" position="-100 -100 -100"></a-sky>
+  
+    <a-assets>
+      <a-asset-item id="takeoff" src="finalProject.gltf"></a-asset-item>
+      <img id="sky" src="skky.jpg">
+      <a-asset-item id="road" src="airportroadway.gltf"></a-asset-item>
+      <a-asset-item id="road1" src="airport.gltf"></a-asset-item>
+      <a-asset-item id="road2" src="airportbuilding.gltf"></a-asset-item>
+      <a-asset-item id="road3" src="airplanes1.gltf"></a-asset-item>
+      <img id="sea" src="sea.jpg">
+    </a-assets>
+
+  <a-plane
+  width="1000"
+  height="1000"
+  rotation="-90 0 0"
+  <a-image src="#sea"></a-image>></a-plane>  
+
+    <a-entity gltf-model="#takeoff" animation-mixer="repetitions: 1;"  position="10 0.5 100" rotation="0 180 0" scale="1.5 1.5 1.5"></a-entity>
+    <a-entity gltf-model="#road" position="-20 0 180" rotation="0 0 0" scale="2 2 2"></a-entity> 
+    <a-entity gltf-model="#road1" position="0 0 0" rotation="0 90 0" scale="2 2 2"></a-entity>
+    <a-entity gltf-model="#road2" position="0 0 0" rotation="0 90 0" scale="2 2 2"></a-entity>
+    <a-entity gltf-model="#road3" position="0 0 0" rotation="0 90 0" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#road" position="-20 0 0" rotation="0 0 0" scale="2 2 2"></a-entity> 
+
+  </a-scene>
+</body>
+</html>
